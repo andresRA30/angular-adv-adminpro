@@ -72,7 +72,7 @@ export class UsuarioService {
       }
     }).pipe(
       map((resp: any) => {
-        console.log(resp)
+
         const {
           email,
           google,

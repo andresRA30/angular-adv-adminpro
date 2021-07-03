@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
 import { ModalImagenService } from '../../../services/modal-imagen.service';
 import { delay } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
+import { Hospital } from '../../../models/hospital.model';
 
 @Component({
   selector: 'app-usuarios',
@@ -60,10 +61,11 @@ export class UsuariosComponent implements OnInit, OnDestroy {
       return this.usuarios = this.usuariosTemp;
     }
     this.busquedasService.buscar('usuarios', termino)
-      .subscribe(resultados => {
+      .subscribe((resultados: Usuario[]) => {
         this.usuarios = resultados;
       });
   }
+
   eliminarUsuario(usuario: Usuario) {
     if (usuario.uid === this.UsuarioService.uid) {
       return Swal.fire('Error', 'No puede borrarse a si mismo', 'error');
