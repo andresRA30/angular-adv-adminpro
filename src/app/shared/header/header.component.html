@@ -6,8 +6,8 @@
         <!-- ============================================================== -->
         <!-- Logo -->
         <!-- ============================================================== -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
+        <div class="navbar-header ">
+            <a class="navbar-brand " href="index.html">
                 <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
@@ -27,7 +27,7 @@
         <!-- ============================================================== -->
         <!-- End Logo -->
         <!-- ============================================================== -->
-        <div class="navbar-collapse">
+        <div class="navbar-collapse ">
             <!-- ============================================================== -->
             <!-- toggle and nav items -->
             <!-- ============================================================== -->
@@ -35,7 +35,7 @@
                 <!-- This is  -->
                 <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark"
                         href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark"
+                <li class="nav-item "> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark"
                         href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
                 <li class="nav-item hidden-sm-down"></li>
             </ul>
@@ -49,9 +49,9 @@
                 <li class="nav-item hidden-xs-down search-box"> <a
                         class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i
                             class="ti-search"></i></a>
-                    <form class="app-search">
-                        <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i
-                                class="ti-close"></i></a>
+                    <form class="app-search" (ngSubmit)="buscar(txtTermino.value)">
+                        <input type="text" class="form-control" placeholder="Buscar médico, hospital o usuario"
+                            #txtTermino> <a class="srh-btn"><i class="ti-close"></i></a>
                     </form>
                 </li>
                 <!-- ============================================================== -->
